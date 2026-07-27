@@ -1,0 +1,6 @@
+include README.md
+include LICENSE
+
+recursive-include haloClassifier_pkg/models *.pkl
+recursive-include haloClassifier_pkg/models *.csv
+recursive-include haloClassifier_pkg/models *.joblib

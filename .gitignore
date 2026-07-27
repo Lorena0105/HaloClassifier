@@ -1,0 +1,44 @@
+# Ignore small model pickle (too big for GitHub)
+haloClassifier_pkg/models/small/random_forest_top265_model_small.pkl
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Virtual environments
+venv/
+env/
+.venv/
+conda-env/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Temporary files
+*.log
+*.tmp
+
+# HaloClassifier outputs
+contigs_features.csv
+predictions_contigs.tsv
+predictions_contigs_threshold_*.tsv
+short_contigs_list.csv
+haloClassifier_input_warnings.txt
+
+# Temporary Prodigal folder
+prodigal_fragments/
+
+# R
+.Rhistory
