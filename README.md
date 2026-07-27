@@ -110,13 +110,10 @@ In this stage, input sequences are processed to generate a feature matrix in CSV
 
 ### What happens during feature generation?
 
-- The program **scans the input folder** and processes only valid nucleotide sequence files  
-  (`.fasta`, `.fa`, `.fna`, `.fas`).
+- The program **scans the input folder** and processes only valid nucleotide sequence files (`.fasta`, `.fa`, `.fna`, `.fas`).
 - Multi-contig FASTA files are supported.
-- Contigs **>105 kb** are automatically fragmented into pieces between 40 kb and 105 kb, ensuring that all 
-  resulting fragments fall within the **extralarge** model range.
-- Contigs **<1 kb** are not excluded, but are **flagged** and reported separately in  
-  `short_contigs_list.csv`, since they fall outside the training range.
+- Contigs **>105 kb** are automatically fragmented into pieces between 40 kb and 105 kb, ensuring that all resulting fragments fall within the **extralarge** model range.
+- Contigs **<1 kb** are not excluded, but are **flagged** and reported separately in `short_contigs_list.csv`, since they fall outside the training range.
 - Each contig (or fragment) is first assigned to its corresponding size-specific model. HaloClassifier then computes **only the features required by that model**, avoiding unnecessary calculations.
 
 The computed features may include:
@@ -165,8 +162,7 @@ The generated feature table is then classified using **pre-trained size-specific
 
 - Contigs <1 kb → classified with *small* model but flagged (`below_training_range = True`) in the final report.  
 - Contigs 100–105 kb → treated as *extralarge* (no fragmentation).  
-- Contigs >105 kb → automatically fragmented into ≤105 kb segments before classification. Fragment probabilities 
-   are averaged for the final prediction.
+- Contigs >105 kb → automatically fragmented into pieces between 40 kb and 105 kb before classification. Fragment probabilities are averaged for the final prediction.
 
 #### Probability Threshold [-p]
 Users can optionally filter contigs based on a minimum predicted probability for either chromosome or plasmid.
