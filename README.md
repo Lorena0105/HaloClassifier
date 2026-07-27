@@ -166,7 +166,7 @@ The generated feature table is then classified using **pre-trained size-specific
 
 #### Probability Threshold [-p]
 Users can optionally filter contigs based on a minimum predicted probability for either chromosome or plasmid.
-A complementary file will be automatically generated → predictions_contigs_threshold_0.60.tsv (default for p = 0.6).
+A complementary file will be automatically generated → `predictions_contigs_threshold_0.60.tsv` (default for p = 0.6).
 
 Example usage:
 
