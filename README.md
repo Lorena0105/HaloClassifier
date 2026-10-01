@@ -193,6 +193,6 @@ This produces:
 
 ## Citation
 
-If you use HaloClassifier in your research, please cite the corresponding publication.
+If you use HaloClassifier in your research, please cite the corresponding publication:
 
-Citation information will be added upon publication.
+López-Roig L, Fillol-Salom A, González-Candelas F. HaloClassifier: integrating coding-signature features and *k*-mer composition for plasmid-chromosome discrimination in haloarchaeal genomes. bioRxiv [Preprint]. 2026 Sep 21. doi:10.64898/2026.09.21.753098.
